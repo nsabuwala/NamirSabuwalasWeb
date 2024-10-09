@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Pixelated font */
+    body {
+        background-color: black;
+        color: white;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 12px; /* Smaller font size */
+        font-weight: 300; /* Thinner font */
+        font-stretch: 85%; /* Less wide font */
+    }
+    .button {
+        display: inline-block;
+        padding: 10px 15px;
+        font-size: 8px; /* Smaller button font */
+        color: white;
+        background-color: grey;
+        border: 2px solid white;
+        border-radius: 10px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        margin-left: 15px;
+        font-weight: 300; /* Thinner button font */
+        font-stretch: 75%; /* Less wide button font */
+    }
+    .button:hover {
+        background-color: darkgrey;
+    }
+    h1, h2, h3 {
+        color: white;
+        text-shadow: 1px 1px 2px grey;
+        font-size: 16px; /* Adjust heading font size */
+        font-weight: 300; /* Thinner heading font */
+        font-stretch: 85%; /* Less wide heading font */
+        cursor: pointer; /* Cursor to indicate clickability */
+    }
+    p, ul {
+        color: grey;
+        font-size: 10px; /* Smaller paragraph font */
+        font-weight: 300; /* Thinner paragraph font */
+        font-stretch: 85%; /* Less wide paragraph font */
+    }
+    .content {
+        display: none;
+    }
+    .button-hide {
+        display: none;
+        margin-left: 15px;
+        font-size: 8px;
+    }
+
+    /* Image resizing */
+    img {
+        max-width: 500px; /* Set the maximum width */
+        max-height: 300px; /* Set the maximum height */
+        width: auto;       /* Maintain aspect ratio */
+        height: auto;      /* Maintain aspect ratio */
+        margin: 10px 0;    /* Add space between images */
+    }
+
+    </style>
+    <script>
+        function toggleSection(sectionId, buttonId) {
+            var section = document.getElementById(sectionId);
+            var button = document.getElementById(buttonId);
+            var hideButton = document.getElementById(buttonId + '-hide');
+            
+            if (section.style.display === "none") {
+                section.style.display = "block";
+                button.style.display = "none";
+                hideButton.style.display = "inline-block";
+            } else {
+                section.style.display = "none";
+                button.style.display = "inline-block";
+                hideButton.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>
+        About Me
+        <a href="index.html" class="button">Back to Home</a>
+    </h1>
+    
+    <p>Hi, I’m Namir Sabuwala, an Electrical Engineering student at ASU. This page talks a bit about my background, interests, and journey in the field of electrical engineering.</p>
+
+    <div>
+        <a href="javascript:void(0)" class="button" id="button-travelling" onclick="toggleSection('travelling', 'button-travelling')">Travelling</a>
+        <a href="javascript:void(0)" class="button-hide" id="button-travelling-hide" onclick="toggleSection('travelling', 'button-travelling')">Hide</a>
+        
+        <a href="javascript:void(0)" class="button" id="button-plastic-band" onclick="toggleSection('plastic-band', 'button-plastic-band')">Plastic Flower Band</a>
+        <a href="javascript:void(0)" class="button-hide" id="button-plastic-band-hide" onclick="toggleSection('plastic-band', 'button-plastic-band')">Hide</a>
+
+        <a href="javascript:void(0)" class="button" id="button-table-tennis" onclick="toggleSection('table-tennis', 'button-table-tennis')">ASU Official Table Tennis Team</a>
+        <a href="javascript:void(0)" class="button-hide" id="button-table-tennis-hide" onclick="toggleSection('table-tennis', 'button-table-tennis')">Hide</a>
+
+        <a href="javascript:void(0)" class="button" id="button-sports" onclick="toggleSection('sports', 'button-sports')">Sports</a>
+        <a href="javascript:void(0)" class="button-hide" id="button-sports-hide" onclick="toggleSection('sports', 'button-sports')">Hide</a>
+
+        <a href="javascript:void(0)" class="button" id="button-family" onclick="toggleSection('family', 'button-family')">Family and Friends</a>
+        <a href="javascript:void(0)" class="button-hide" id="button-family-hide" onclick="toggleSection('family', 'button-family')">Hide</a>
+    </div>
+
+    <div id="travelling" class="content">
+        <h3>Travelling Section</h3>
+        <p>I have been travelling all of my life. These past two summers I was fortunate enough to be able to take a trip with my close friends to Southeast Asia and Europe.</p>
+        <img src="t2.jpg" alt="Plastic Flower Band Performance">
+        <img src="t3.jpg" alt="Plastic Flower Band Performance">
+<p>These are pictures from my trip to Europe!</p>
+        <img src="t4.jpg" alt="Plastic Flower Band Performance">
+        <img src="t5.jpg" alt="Plastic Flower Band Performance">
+<p>This is "Gardens by the bay" in Singapore!</p>
+        <img src="t6.jpg" alt="Plastic Flower Band Performance">
+<p>This is an alligator exhibit by the Mekong River in Vietnam.</p>
+        <img src="t7.jpg" alt="Plastic Flower Band Performance">
+<p>These are the Petronas towers in Kuala Lumpur Malaysia!</p>
+        <img src="t8.jpg" alt="Plastic Flower Band Performance">
+<p>This is an ancient Temple in Siem Reap Cambodia</p>
+        <img src="t9.jpg" alt="Plastic Flower Band Performance">
+<p>This is the blue water at the beaches in Phuket.</p>
+    </div>
+
+    <div id="plastic-band" class="content">
+        <h3>Plastic Flower Band Section</h3>
+        <p>I started playing the guitar as a senior in high school, and I have been practicing since then. My good friend Aleks, who is also a musician, decided that we should create some of our own music.</p>
+
+        <img src="pf1.jpg" alt="Plastic Flower Band Performance"> 
+        <p>This is a photo from our first live performance at a house concert in March 2024.</p>
+        <img src="pf2.jpg" alt="Plastic Flower Band Performance">
+        <p>This is the name and photo of our album "No I Not".</p>
+        <img src="pf3.jpg" alt="Plastic Flower Band Performance">
+        <p>This is a photo from when the band was first being created.</p>
+        <p>Check out our music on Spotify: <a href="https://open.spotify.com/artist/7eJEQJnmNvmogNjcZQehI9" target="_blank" style="color: grey;">Plastic Flower Band on Spotify</a></p>
+    </div>
+
+    <div id="table-tennis" class="content">
+        <h3>ASU Official Table Tennis Team Section</h3>
+        <p>I came to ASU having played Table Tennis with my dad all of my life. I joined the first tournament I saw without realizing it was tryouts for the official ASU table tennis team, which I am now a part of.</p>
+
+        <img src="pp1.jpg" alt="Table Tennis">
+        <p>Game day outfit for the first Table Tennis Tournament.</p>
+        <img src="pp2.jpg" alt="Table Tennis">
+        <p>Team dinner.</p>
+        <video width="400" height="300" controls>
+            <source src="pp3.mp4" type="video/mp4">
+        </video>
+        <p>This is a video from the first Table Tennis Tournament.</p>
+    </div>
+
+    <div id="sports" class="content">
+        <h3>Sports Section</h3>
+        <p>As much as I love Table Tennis, I enjoy playing other sports as well. I spent a good amount of time playing Pickleball in the summer of 2024. I also play lots of 3v3 basketball, and I play volleyball every chance I get!</p>
+    </div>
+
+    <div id="family" class="content">
+        <h3>Family and Friends Section</h3>
+        <p>This section shares information about my family and their influence on my life.</p>
+    </div>
+
+</body>
+</html>
