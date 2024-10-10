@@ -1,1 +1,73 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Drum Kit</title>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Same pixelated font */
+    
+    body {
+        background-color: black;
+        color: white;
+        font-family: 'Press Start 2P', cursive;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .drum-kit {
+        display: inline-block;
+        padding-top: 20px;
+    }
+    .drum {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        background-color: grey;
+        border: 2px solid white;
+        border-radius: 50%; /* Circular drum button */
+        cursor: pointer;
+    }
+    .drum.oval {
+        width: 120px;
+        height: 70px;
+        border-radius: 50%/50%; /* Oval drum button */
+    }
+    .drum:hover {
+        background-color: darkgrey;
+    }
+    .back-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        background-color: grey;
+        color: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    .back-button:hover {
+        background-color: darkgrey;
+    }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-button">Back to Home</a>
+    <h1>Play the Drums</h1>
+    <div class="drum-kit">
+        <div class="drum" onclick="new Audio('kick.m4a').play()"></div> <!-- Kick drum -->
+        <div class="drum oval" onclick="new Audio('snare.m4a').play()"></div> <!-- Snare drum -->
+        <div class="drum" onclick="new Audio('tom.m4a').play()"></div> <!-- Tom drum -->
+        <div class="drum oval" onclick="new Audio('hihat.m4a').play()"></div> <!-- Hi-hat -->
+        <div class="drum" onclick="new Audio('crash.m4a').play()"></div> <!-- Crash cymbal -->
+        <div class="drum oval" onclick="new Audio('ride.m4a').play()"></div> <!-- Ride cymbal -->
+    </div>
+
+</body>
+</html>
