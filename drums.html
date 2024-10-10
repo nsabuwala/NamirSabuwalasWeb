@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,76 +17,87 @@
         text-align: center;
         padding-top: 50px;
     }
+
+    /* Container for the drum kit layout */
     .drum-kit {
-        display: grid;
-        grid-template-columns: 100px 150px 150px 100px;
-        grid-template-rows: 100px 100px 120px;
-        gap: 20px;
-        justify-content: center;
-        align-items: center;
+        position: relative;
+        width: 500px;  /* Adjust to fit all drums */
+        height: 300px; /* Adjust height */
+        margin: 0 auto;
     }
+
+    /* General style for drums */
     .drum {
-        width: 100px;
-        height: 100px;
+        position: absolute;
         background-color: grey;
         border: 2px solid white;
         border-radius: 50%;
         cursor: pointer;
-        position: relative;
-        z-index: 1; /* Ensure drum buttons are above the lines */
+        z-index: 1; /* Ensure drums are above lines */
     }
+
+    /* Kick drum in the center, larger */
     .drum.kick {
         width: 150px;
-        height: 150px; /* Increase size of the kick drum */
-        grid-column: span 2; /* Make the kick drum wider in the grid */
+        height: 150px;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
     }
-    .drum.oval {
-        width: 120px;
-        height: 70px;
-        border-radius: 50%/50%;
+
+    /* Other drum positions and sizes */
+    .drum.snare {
+        width: 100px;
+        height: 100px;
+        bottom: 50px;
+        left: 15%;
     }
-    .drum:hover {
-        background-color: darkgrey;
+    .drum.tom1 {
+        width: 80px;
+        height: 80px;
+        top: 30px;
+        left: 30%;
     }
+    .drum.tom2 {
+        width: 80px;
+        height: 80px;
+        top: 30px;
+        right: 30%;
+    }
+    .drum.hihat {
+        width: 100px;
+        height: 60px;
+        top: 100px;
+        left: 5%;
+        border-radius: 50%/30%; /* Oval shape */
+    }
+    .drum.crash {
+        width: 100px;
+        height: 60px;
+        top: 100px;
+        right: 5%;
+        border-radius: 50%/30%; /* Oval shape */
+    }
+    .drum.ride {
+        width: 100px;
+        height: 60px;
+        top: 160px;
+        right: 10%;
+        border-radius: 50%/30%; /* Oval shape */
+    }
+
+    /* Drum lines */
     .line {
         width: 2px;
         height: 100px;
         background-color: white;
         position: absolute;
-        top: 110%; /* Position lines below the drums */
+        top: 110%; /* Below the drums */
         left: 50%;
         transform: translateX(-50%);
-        z-index: 0; /* Ensure the line stays behind the drum */
+        z-index: 0; /* Ensure the line stays behind the drums */
     }
-    /* Drum positions to match the image */
-    .snare {
-        grid-row: 2;
-        grid-column: 1;
-    }
-    .kick {
-        grid-row: 2;
-        grid-column: 2 / 4; /* Span across two columns */
-    }
-    .tom1 {
-        grid-row: 1;
-        grid-column: 2;
-    }
-    .tom2 {
-        grid-row: 1;
-        grid-column: 3;
-    }
-    .hihat {
-        grid-row: 2;
-        grid-column: 3;
-    }
-    .crash {
-        grid-row: 2;
-        grid-column: 4;
-    }
-    .ride {
-        grid-row: 3;
-        grid-column: 3;
-    }
+
     .back-button {
         position: absolute;
         top: 20px;
@@ -102,6 +114,7 @@
     .back-button:hover {
         background-color: darkgrey;
     }
+
     </style>
 </head>
 <body>
@@ -109,29 +122,36 @@
     <a href="index.html" class="back-button">Back to Home</a>
     <h1>Play the Drums</h1>
     <div class="drum-kit">
-        <div class="drum snare" onclick="new Audio('snare.m4a').play()">
-            <div class="line"></div>
-        </div>
+        <!-- Kick drum in the center -->
         <div class="drum kick" onclick="new Audio('kick.m4a').play()">
             <div class="line"></div>
         </div>
+        <!-- Snare on the left -->
+        <div class="drum snare" onclick="new Audio('snare.m4a').play()">
+            <div class="line"></div>
+        </div>
+        <!-- Tom-Toms above the kick drum -->
         <div class="drum tom1" onclick="new Audio('tom1.m4a').play()">
             <div class="line"></div>
         </div>
         <div class="drum tom2" onclick="new Audio('tom2.m4a').play()">
             <div class="line"></div>
         </div>
-        <div class="drum oval hihat" onclick="new Audio('hihat.m4a').play()">
+        <!-- Hi-hat on the left -->
+        <div class="drum hihat" onclick="new Audio('hihat.m4a').play()">
             <div class="line"></div>
         </div>
-        <div class="drum oval crash" onclick="new Audio('crash.m4a').play()">
+        <!-- Crash cymbal on the right -->
+        <div class="drum crash" onclick="new Audio('crash.m4a').play()">
             <div class="line"></div>
         </div>
-        <div class="drum oval ride" onclick="new Audio('ride.m4a').play()">
+        <!-- Ride cymbal on the bottom right -->
+        <div class="drum ride" onclick="new Audio('ride.m4a').play()">
             <div class="line"></div>
         </div>
     </div>
 
 </body>
 </html>
+
 
