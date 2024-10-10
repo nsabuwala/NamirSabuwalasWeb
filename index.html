@@ -14,6 +14,10 @@
         font-size: 12px; /* Smaller font size */
         font-weight: 300; /* Thinner font */
         font-stretch: 85%; /* Less wide font */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Ensure footer stays at the bottom */
+        min-height: 100vh;
     }
     .button {
         display: inline-block;
@@ -46,7 +50,20 @@
         font-weight: 300; /* Thinner paragraph font */
         font-stretch: 85%; /* Less wide paragraph font */
     }
-</style>
+    .image-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .image-container img {
+        margin: 0 10px; /* Space between images */
+        border: 2px solid white;
+        border-radius: 10px;
+        width: 100px; /* Adjust image size */
+        height: auto;
+    }
+    </style>
 
 </head>
 <body>
@@ -55,12 +72,19 @@
         <a href="aboutme.html" class="button">About Me</a>
         <a href="experience.html" class="button">Electrical Engineering Experience</a>
         <a href="piano.html" class="button">Play the Piano</a>
-        <a href="drums.html" class="button">Play the Drums</a> <!-- New button added here -->
+        <a href="drums.html" class="button">Play the Drums</a>
     </h1>
     <p>Arizona State University class of Spring 2026</p>
     <p>Electrical Engineering Student</p>
     <p>Email: nsabuwal@asu.edu, namirsabuwala@gmail.com</p>
     <p>Phone number: 480-326-5100</p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/namir-sabuwala" target="_blank" style="color: grey;">www.linkedin.com/in/namir-sabuwala</a></p>
+
+    <!-- Image container to hold the three images side by side -->
+    <div class="image-container">
+        <img src="fp1.jpg" alt="Photo 1 of Namir">
+        <img src="fp2.jpg" alt="Photo 2 of Namir">
+        <img src="fp3.jpg" alt="Photo 3 of Namir">
+    </div>
 </body>
 </html>
