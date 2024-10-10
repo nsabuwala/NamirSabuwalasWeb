@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
     <title>Virtual Drum Kit</title>
 
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Same pixelated font */
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
     
     body {
         background-color: black;
@@ -17,26 +18,67 @@
         padding-top: 50px;
     }
     .drum-kit {
-        display: inline-block;
-        padding-top: 20px;
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
     }
     .drum {
-        display: inline-block;
         width: 100px;
         height: 100px;
-        margin: 20px;
         background-color: grey;
         border: 2px solid white;
-        border-radius: 50%; /* Circular drum button */
+        border-radius: 50%;
         cursor: pointer;
+        position: relative;
     }
     .drum.oval {
         width: 120px;
         height: 70px;
-        border-radius: 50%/50%; /* Oval drum button */
+        border-radius: 50%/50%;
     }
     .drum:hover {
         background-color: darkgrey;
+    }
+    .line {
+        width: 2px;
+        height: 120px;
+        background-color: white;
+        position: absolute;
+        bottom: -130px; /* Adjust the bottom to position the lines under the drums */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    /* Drum positions to match the image */
+    .snare {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .kick {
+        grid-row: 2;
+        grid-column: 2;
+    }
+    .tom1 {
+        grid-row: 1;
+        grid-column: 2;
+    }
+    .tom2 {
+        grid-row: 1;
+        grid-column: 3;
+    }
+    .hihat {
+        grid-row: 2;
+        grid-column: 3;
+    }
+    .crash {
+        grid-row: 2;
+        grid-column: 4;
+    }
+    .ride {
+        grid-row: 3;
+        grid-column: 3;
     }
     .back-button {
         position: absolute;
@@ -61,12 +103,27 @@
     <a href="index.html" class="back-button">Back to Home</a>
     <h1>Play the Drums</h1>
     <div class="drum-kit">
-        <div class="drum" onclick="new Audio('kick.m4a').play()"></div> <!-- Kick drum -->
-        <div class="drum oval" onclick="new Audio('snare.m4a').play()"></div> <!-- Snare drum -->
-        <div class="drum" onclick="new Audio('tom.m4a').play()"></div> <!-- Tom drum -->
-        <div class="drum oval" onclick="new Audio('hihat.m4a').play()"></div> <!-- Hi-hat -->
-        <div class="drum" onclick="new Audio('crash.m4a').play()"></div> <!-- Crash cymbal -->
-        <div class="drum oval" onclick="new Audio('ride.m4a').play()"></div> <!-- Ride cymbal -->
+        <div class="drum snare" onclick="new Audio('snare.m4a').play()">
+            <div class="line"></div>
+        </div>
+        <div class="drum kick" onclick="new Audio('kick.m4a').play()">
+            <div class="line"></div>
+        </div>
+        <div class="drum tom1" onclick="new Audio('tom1.m4a').play()">
+            <div class="line"></div>
+        </div>
+        <div class="drum tom2" onclick="new Audio('tom2.m4a').play()">
+            <div class="line"></div>
+        </div>
+        <div class="drum oval hihat" onclick="new Audio('hihat.m4a').play()">
+            <div class="line"></div>
+        </div>
+        <div class="drum oval crash" onclick="new Audio('crash.m4a').play()">
+            <div class="line"></div>
+        </div>
+        <div class="drum oval ride" onclick="new Audio('ride.m4a').play()">
+            <div class="line"></div>
+        </div>
     </div>
 
 </body>
