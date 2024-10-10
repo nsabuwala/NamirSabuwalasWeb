@@ -68,26 +68,21 @@
     <h1>Play the Piano</h1>
     <div class="piano">
         <!-- White keys -->
-        <div class="key white" onclick="playSound('C')"></div>
-        <div class="key black" onclick="playSound('Cs')"></div>
-        <div class="key white" onclick="playSound('D')"></div>
-        <div class="key black" onclick="playSound('Ds')"></div>
-        <div class="key white" onclick="playSound('E')"></div>
-        <div class="key white" onclick="playSound('F')"></div>
-        <div class="key black" onclick="playSound('Fs')"></div>
-        <div class="key white" onclick="playSound('G')"></div>
-        <div class="key black" onclick="playSound('Gs')"></div>
-        <div class="key white" onclick="playSound('A')"></div>
-        <div class="key black" onclick="playSound('As')"></div>
-        <div class="key white" onclick="playSound('B')"></div>
+       <div class="key white" onclick="new Audio('C.m4a').play()"></div>
+        <div class="key black" onclick="new Audio('Cs.m4a').play()"></div>
+        <div class="key white" onclick="new Audio('D.m4a').play()"></div>
+        <div class="key black" onclick="new Audio('Ds.m4a').play()"></div>
+        <div class="key white" onclick="new Audio('E.m4a').play()"></div>
+        <div class="key white" onclick="new Audio('F.m4a').play()"></div>
+        <div class="key black" onclick="new Audio('Fs.m4a').play()"></div>
+        <div class="key white" onclick="new Audio('G.m4a').play()"></div>
+        <div class="key black" onclick="new Audio('Gs.m4a').play()"></div>
+        <div class="key white" onclick="new Audio('A.m4a').play()"></div>
+        <div class="key black" onclick="new Audio('As.m4a').play()"></div>
+        <div class="key white" onclick="new Audio('B.m4a').play()"></div>
     </div>
 
-    <script>
-    function playSound(note) {
-        let audio = new Audio(note + '.m4a');  //no folder path needed
-        audio.play();
-    }
-    </script>
+ 
 
 </body>
 </html>
