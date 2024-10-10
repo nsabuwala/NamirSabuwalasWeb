@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +18,8 @@
     }
     .drum-kit {
         display: grid;
-        grid-template-columns: 100px 100px 100px 100px;
-        grid-template-rows: 100px 100px 100px;
+        grid-template-columns: 100px 150px 150px 100px;
+        grid-template-rows: 100px 100px 120px;
         gap: 20px;
         justify-content: center;
         align-items: center;
@@ -33,6 +32,12 @@
         border-radius: 50%;
         cursor: pointer;
         position: relative;
+        z-index: 1; /* Ensure drum buttons are above the lines */
+    }
+    .drum.kick {
+        width: 150px;
+        height: 150px; /* Increase size of the kick drum */
+        grid-column: span 2; /* Make the kick drum wider in the grid */
     }
     .drum.oval {
         width: 120px;
@@ -44,12 +49,13 @@
     }
     .line {
         width: 2px;
-        height: 120px;
+        height: 100px;
         background-color: white;
         position: absolute;
-        bottom: -130px; /* Adjust the bottom to position the lines under the drums */
+        top: 110%; /* Position lines below the drums */
         left: 50%;
         transform: translateX(-50%);
+        z-index: 0; /* Ensure the line stays behind the drum */
     }
     /* Drum positions to match the image */
     .snare {
@@ -58,7 +64,7 @@
     }
     .kick {
         grid-row: 2;
-        grid-column: 2;
+        grid-column: 2 / 4; /* Span across two columns */
     }
     .tom1 {
         grid-row: 1;
@@ -128,3 +134,4 @@
 
 </body>
 </html>
+
