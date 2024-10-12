@@ -72,9 +72,22 @@
   <p>This is a page with some of the circuit designs and simulations I have made.</p>
  <h2 onclick="toggleSection(2)">Circuit one example</h2>
     <div id="content2" class="content">
+          <img src="t7.jpg" alt="Plastic Flower Band Performance">
         <p>This is my ciruit</p>
          <button class="hide-button" onclick="toggleSection(4)">Hide</button>
     </div>
-  
+  <script>
+        function toggleSection(sectionId) {
+            const content = document.getElementById('content' + sectionId);
+            const hideButton = content.querySelector('.hide-button');
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                hideButton.style.display = 'inline-block';
+            } else {
+                content.style.display = 'none';
+                hideButton.style.display = 'none';
+            }
+        }
+    </script>
   </body>
 </html>
