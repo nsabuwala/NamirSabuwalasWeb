@@ -1,1 +1,79 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit Designs and Simulations</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Pixelated font */
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 12px; /* Smaller font size */
+            font-weight: 300; /* Thinner font */
+            font-stretch: 85%; /* Less wide font */
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 8px; /* Smaller button font */
+            color: white;
+            background-color: grey;
+            border: 2px solid white;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            margin-left: 15px;
+            font-weight: 300; /* Thinner button font */
+            font-stretch: 85%; /* Less wide button font */
+        }
+        .button:hover {
+            background-color: darkgrey;
+        }
+        h1, h2, h3 {
+            color: white;
+            text-shadow: 1px 1px 2px grey;
+            font-size: 16px; /* Adjust heading font size */
+            font-weight: 300; /* Thinner heading font */
+            font-stretch: 85%; /* Less wide heading font */
+            cursor: pointer;
+        }
+        p, ul {
+            color: grey;
+            font-size: 10px; /* Smaller paragraph font */
+            font-weight: 300; /* Thinner paragraph font */
+            font-stretch: 85%; /* Less wide paragraph font */
+        }
+        .content {
+            display: none; /* Initially hide the content */
+            margin-top: 10px;
+        }
+        .hide-button {
+            display: none; /* Hide the "Hide" button initially */
+            background-color: darkgrey;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            font-size: 8px;
+            padding: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+ <h1 onclick="toggleSection(1)">
+        Electrical Engineering Experience
+        <a href="index.html" class="button">Back to Home</a>
+ </h1>
+  <p>This is a page with some of the circuit designs and simulations I have made.</p>
+ <h2 onclick="toggleSection(2)">Circuit one example</h2>
+    <div id="content2" class="content">
+        <p>This is my ciruit</p>
+    </div>
+  
+  </body>
+</html>
